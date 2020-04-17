@@ -10,7 +10,7 @@ function modeConfig(env) {
 }
 
 module.exports = function (
-  { mode, presets } = { mode: 'production', presets: [] },
+  { mode, presets } = { mode: 'production', presets: [] }
 ) {
   return webpackMerge(
     {
@@ -19,6 +19,7 @@ module.exports = function (
         path: path.resolve(__dirname, 'build'),
         filename: '[name]-[contenthash].bundle.js',
         chunkFilename: '[name]-[contenthash].bundle.js',
+        publicPath: '/',
       },
       module: {
         rules: [
@@ -34,7 +35,7 @@ module.exports = function (
               },
             ],
           },
-        ]
+        ],
       },
       plugins: [
         new HtmlWebpackPlugin({
@@ -46,6 +47,6 @@ module.exports = function (
       },
     },
     modeConfig(mode),
-    presetConfig({ mode, presets }),
-  )
-}
+    presetConfig({ mode, presets })
+  );
+};
