@@ -5,7 +5,7 @@ import { Router, Link } from '@reach/router';
 import { HomePage } from './pages/home';
 import { AboutPage } from './pages/about';
 
-import { routes } from './routes';
+import { routes } from 'routes';
 
 const root = document.getElementById('root') as HTMLDivElement;
 

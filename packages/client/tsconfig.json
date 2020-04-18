@@ -5,6 +5,12 @@
     "jsx": "react",
     "strict": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "src",
+    "paths": {
+      "hooks/*": ["hooks/*"],
+      "components/*": ["components/*"],
+      "routes": ["routes.ts"]
+    }
   }
 }

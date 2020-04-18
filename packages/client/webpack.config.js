@@ -44,6 +44,11 @@ module.exports = function (
       ],
       resolve: {
         extensions: ['.ts', '.tsx', '.js'],
+        alias: {
+          hooks: path.resolve(__dirname, 'src/hooks'),
+          components: path.resolve(__dirname, 'src/components'),
+          routes: path.resolve(__dirname, 'src/routes.ts'),
+        },
       },
     },
     modeConfig(mode),
