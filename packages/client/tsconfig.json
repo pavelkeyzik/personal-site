@@ -10,7 +10,9 @@
     "paths": {
       "hooks/*": ["hooks/*"],
       "components/*": ["components/*"],
-      "routes": ["routes.ts"]
+      "utils/*": ["utils/*"],
+      "routes": ["routes.ts"],
+      "types": ["types.ts"]
     }
   }
 }
