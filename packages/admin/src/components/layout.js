@@ -16,6 +16,9 @@ function Layout({ children }) {
             <SideNav.Link as={NavLink} to="/" exact>
               <Text>Dasboard</Text>
             </SideNav.Link>
+            <SideNav.Link as={NavLink} to="/works">
+              <Text>Works</Text>
+            </SideNav.Link>
             <SideNav.Link as={NavLink} to="/about">
               <Text>About</Text>
             </SideNav.Link>

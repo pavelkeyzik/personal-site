@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { DashboardPage } from './pages/dashboard';
 import { AboutPage } from './pages/about';
 import { Layout } from './components/layout';
+import { WorksPage } from './pages/works';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,6 +16,9 @@ ReactDOM.render(
           <Switch>
             <Route path="/about">
               <AboutPage />
+            </Route>
+            <Route path="/works">
+              <WorksPage />
             </Route>
             <Route path="/">
               <DashboardPage />
