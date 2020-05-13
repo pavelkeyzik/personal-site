@@ -6,8 +6,10 @@ import {
   Flex,
   ButtonPrimary,
   TextInput,
+  Box,
 } from '@primer/components';
 import { PlusIcon, SearchIcon } from '@primer/octicons-v2-react';
+import { WorkPreview } from '../components/work-preview';
 
 function WorksPage() {
   return (
@@ -29,6 +31,9 @@ function WorksPage() {
           </ButtonPrimary>
         </div>
       </Flex>
+      <Box mt={4}>
+        <WorkPreview />
+      </Box>
     </React.Fragment>
   );
 }
