@@ -1,16 +1,45 @@
 import React from 'react';
-import { Grid, Box, Text, Flex, Button, AvatarStack } from '@primer/components';
-import { PencilIcon } from '@primer/octicons-v2-react';
+import {
+  Grid,
+  Box,
+  Text,
+  Flex,
+  Button,
+  AvatarStack,
+  Link,
+} from '@primer/components';
+import { PencilIcon, LinkExternalIcon } from '@primer/octicons-v2-react';
 
-function WorkPreview() {
+function WorkPreview({ title, description, link }) {
   return (
     <Grid gridTemplateColumns="200px 1fr auto" gridTemplateRows="200px">
-      <Box bg="blue.2" />
+      <Flex
+        flexDirection="column"
+        alignItems="center"
+        style={styles.imageContainer}
+      >
+        <Box bg="blue.2" overflow="hidden" height={200} width={200}>
+          <img src="https://picsum.photos/200?random" />
+        </Box>
+        {link && (
+          <Flex
+            alignItems="center"
+            justifyContent="center"
+            height={40}
+            backgroundColor="blue.2"
+            style={styles.siteLink}
+          >
+            <Link href={link} target="_blank">
+              <LinkExternalIcon /> Visit site
+            </Link>
+          </Flex>
+        )}
+      </Flex>
       <Flex paddingX={3} flexDirection="column">
-        <Text fontWeight="bold" mb={2} p={0} as="h3">
-          Project title
+        <Text fontWeight="bold" mb={1} p={0} as="h3">
+          {title || 'Title is not providen'}
         </Text>
-        <Text>Short information about project</Text>
+        <Text mt={2}>{description || 'Information is not providen'}</Text>
         <Text fontWeight="bold" mb={2} mt={4}>
           Technologies:
         </Text>
@@ -38,5 +67,17 @@ function WorkPreview() {
     </Grid>
   );
 }
+
+const styles = {
+  imageContainer: {
+    position: 'relative',
+  },
+  siteLink: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    width: '100%',
+  },
+};
 
 export { WorkPreview };
