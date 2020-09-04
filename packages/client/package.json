@@ -20,7 +20,7 @@
     "@reach/router": "^1.3.3",
     "apollo-boost": "^0.4.7",
     "graphql": "^14.3.1",
-    "react": "0.0.0-experimental-e5d06e34b",
+    "react": "0.14.0",
     "react-dom": "0.0.0-experimental-e5d06e34b",
     "react-router": "^6.0.0-alpha.3"
   },
